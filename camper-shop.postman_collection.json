@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "0d524da9-7e2c-48d1-b1c2-2db813ed06e8",
+		"name": "camper-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35115081"
+	},
+	"item": [
+		{
+			"name": "create-category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/bags.jpg"
+						},
+						{
+							"key": "data",
+							"value": "{\n      \"name\": \"Bags\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-a-category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/668d848b2df674734f2a2468",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"668d848b2df674734f2a2468"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/668d877c5c40d8da3aef56c9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"668d877c5c40d8da3aef56c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/tent3.jpg"
+						},
+						{
+							"key": "data",
+							"value": "{\n        \"name\": \"Lightweight Backpacking Tent\",\n        \"price\": 149.99,\n        \"stock\": \"outStock\",\n        \"quantity\": 0,\n        \"description\": \"A compact and lightweight tent perfect for backpacking trips. Easy to carry and quick to set up.\",\n        \"category\": \"668d848b2df674734f2a2468\"\n    }",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-a-product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/668e4595f0498c136018d91d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"668e4595f0498c136018d91d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/bag2.jpg",
+							"disabled": true
+						},
+						{
+							"key": "data",
+							"value": "{ \n  \"quantity\": 3,\n  \"price\": 12.50\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/668e4595f0498c136018d91d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"668e4595f0498c136018d91d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/668e4dd89e949e45ef985497",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"668e4dd89e949e45ef985497"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer\": {\r\n        \"name\": \"Jane Smith\",\r\n        \"email\": \"jane.smith@example.com\",\r\n        \"phone\": \"987-654-3210\",\r\n        \"address\": \"456 Elm St, Othertown, USA\"\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"668e4da29e949e45ef985493\",\r\n            \"quantity\": 1,\r\n            \"price\": 24.85\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-a-order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/orders/2024691268",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"2024691268"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
